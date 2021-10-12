@@ -13,19 +13,21 @@ public class Config {
     @Value("${spring.activemq.broker-url}")
     private String brokerUrl;
 
-//    A bean to create a queue
+    //    A bean to create a queue
     @Bean
     public ActiveMQQueue queue() {
         return new ActiveMQQueue("iqvia.test");
     }
-//    A bean to create ActiveMQ connection factory to connect with the broker at the given URL
+
+    //    A bean to create ActiveMQ connection factory to connect with the broker at the given URL
     @Bean
     public ActiveMQConnectionFactory activeMQConnectionFactory() {
         ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory();
         factory.setBrokerURL(brokerUrl);
         return factory;
     }
-//    A bean to return a jmsTemplate created using the factory
+
+    //    A bean to return a jmsTemplate created using the factory
     @Bean
     public JmsTemplate jmsTemplate() {
         return new JmsTemplate(activeMQConnectionFactory());

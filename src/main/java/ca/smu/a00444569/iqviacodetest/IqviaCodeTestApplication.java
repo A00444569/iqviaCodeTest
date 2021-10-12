@@ -16,7 +16,8 @@ public class IqviaCodeTestApplication {
     public static void main(String[] args) {
         SpringApplication.run(IqviaCodeTestApplication.class, args);
     }
-//    Swagger for API testing and documentation.
+
+    //    Swagger for API testing and documentation.
     @Bean
     public Docket swaggerConfiguration() {
         return new Docket(DocumentationType.SWAGGER_2)

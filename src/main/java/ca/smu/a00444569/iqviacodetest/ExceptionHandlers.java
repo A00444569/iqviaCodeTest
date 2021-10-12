@@ -14,7 +14,7 @@ import java.util.List;
 @RestControllerAdvice
 public class ExceptionHandlers {
 
-//    To handle other unexpected errors.
+    //    To handle other unexpected errors.
     @ExceptionHandler(Exception.class)
     protected ResponseEntity<ErrorResponse> forAllExceptions(Exception ex, WebRequest request) {
         List<String> details = new ArrayList<>();
@@ -22,7 +22,8 @@ public class ExceptionHandlers {
         ErrorResponse error = new ErrorResponse("Some exception has happened, check details.", details);
         return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
     }
-//    To handle input parsing errors.
+
+    //    To handle input parsing errors.
     @ExceptionHandler(HttpMessageNotReadableException.class)
     protected ResponseEntity<ErrorResponse> messageNotReadable(HttpMessageNotReadableException ex, WebRequest request) {
         List<String> details = new ArrayList<>();
