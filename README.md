@@ -8,11 +8,11 @@
 5. Hold down shift key and click the right mouse button on the window.
 6. In the menu, find and select Powershell/Command Promt.
 7. Enter the following command to start the message broker.
-    - ./activemq start
+    - .\activemq start
 
 
 ### Start the Spring Boot application:
-Build the application using a IDE is one way (or) Try using the packed jar file.
+Building and running the application using an IDE (or) using the packed jar file following the instructions below.
 1. In the local clone of the git repository, open up a terminal window.
 2. Enter the following command to start up the Spring Boot application.
     - java -jar iqviaCodeTest-0.0.1-SNAPSHOT.jar
