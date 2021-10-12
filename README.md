@@ -17,7 +17,7 @@ Building and running the application using an IDE (or) using the packed jar file
 2. Enter the following command to start up the Spring Boot application.
     - java -jar iqviaCodeTest-0.0.1-SNAPSHOT.jar
 3. Once the application is up, one can access the [Swagger UI](http://localhost:4569/swagger-ui/) for API testing.
-4. Following are sample valid and invalid requests.
+4. Following are sample valid and invalid requests. (Kindly provide time in the format given below)
     - If the current time is Tue Oct 12 17:15:40 IST 2021
         - Valid request \
         {"dateTime": "Tue Oct 12 17:16:10 IST 2021", "message": "string"}
